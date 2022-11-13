@@ -6,6 +6,7 @@ sample_roster = ['James Hetfield', 'Dave Mustaine', 'Cliff Burton', 'Kirk Hammet
 def assign_groups(roster, group_size):
 
     number_of_groups = ceil(len(roster) / group_size)
+    remainder = roster % group_size
     print(f'number_of_groups: {number_of_groups}\n\n')
 
     list_of_groups = []
