@@ -6,7 +6,8 @@ sample_roster = ['James Hetfield', 'Dave Mustaine', 'Cliff Burton', 'Kirk Hammet
 def assign_groups(roster, group_size):
 
     number_of_groups = ceil(len(roster) / group_size)
-    remainder = roster % group_size
+    remainder = len(roster) % group_size
+    print(f'remainder: {remainder}')
     print(f'number_of_groups: {number_of_groups}\n\n')
 
     list_of_groups = []
@@ -17,6 +18,9 @@ def assign_groups(roster, group_size):
             roster.remove(j)
         if len(roster) < group_size and len(roster) > 0:
             group_size = len(roster)
+
+    if len(list_of_groups[-2]) > len(list_of_groups[-1]):
+        list_of_groups[-1].append(list_of_groups[-2].pop())
 
     name_of_group = 1
     for i in list_of_groups:
