@@ -33,3 +33,4 @@ def assign_groups(roster, group_size):
     return list_of_groups
 
 print(assign_groups(sample_roster, 3))
+print(assign_groups(sample_roster, 4))
