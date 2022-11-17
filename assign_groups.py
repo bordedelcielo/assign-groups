@@ -1,5 +1,5 @@
 from random import sample
-from math import ceil
+from math import ceil, floor
 
 sample_roster = ['James Hetfield', 'Dave Mustaine', 'Cliff Burton', 'Kirk Hammett', 'Lars Ulrich', 'Ron McGovney', 'Lloyd Grant', 'Steve Harris', 'Dave Murray', 'Clive Burr', 'Adrian Smith', 'Bruce Dickinson', 'Nicko McBrain']
 
@@ -33,4 +33,12 @@ def assign_groups(roster, group_size):
     return list_of_groups
 
 print(assign_groups(sample_roster, 3))
-print(assign_groups(sample_roster, 4))
+# print(assign_groups(sample_roster, 4))
+
+def assign(roster, number_of_groups):
+    group_size = len(roster) / number_of_groups
+    print('group size: ', group_size)
+    print('ceil: ', ceil(group_size))
+    print('floor: ', floor(group_size))
+
+assign(sample_roster, 3)
