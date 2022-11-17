@@ -32,7 +32,7 @@ def assign_groups(roster, group_size):
     
     return list_of_groups
 
-print(assign_groups(sample_roster, 3))
+# print(assign_groups(sample_roster, 3))
 # print(assign_groups(sample_roster, 4))
 
 def assign(roster, number_of_groups):
@@ -40,5 +40,26 @@ def assign(roster, number_of_groups):
     print('group size: ', group_size)
     print('ceil: ', ceil(group_size))
     print('floor: ', floor(group_size))
+    group_modulo = len(roster) % number_of_groups
+    print('group modulo: ', group_modulo)
+    group_floor_division = len(roster) // number_of_groups
+    print('group floor division: ', group_floor_division)
 
-assign(sample_roster, 3)
+    group_dict = {}
+
+    group_number = 0
+    for i in range(number_of_groups):
+        if group_modulo == 0:
+            group = sample(roster, floor(group_size))
+        else:
+            group = sample(roster, ceil(group_size))
+            group_modulo -= 1
+        for j in group:
+            roster.remove(j)
+        group_dict[group_number] = group
+        group_number += 1
+        print(f'Group Number {group_number}\n{group}')
+
+# assign(sample_roster, 3)
+# assign(sample_roster, 2)
+assign(sample_roster, 6)
