@@ -1,5 +1,6 @@
 from random import sample
 from math import ceil, floor
+import json
 
 sample_roster = ['James Hetfield', 'Dave Mustaine', 'Cliff Burton', 'Kirk Hammett', 'Lars Ulrich', 'Ron McGovney', 'Lloyd Grant', 'Steve Harris', 'Dave Murray', 'Clive Burr', 'Adrian Smith', 'Bruce Dickinson', 'Nicko McBrain']
 
@@ -60,6 +61,17 @@ def assign(roster, number_of_groups):
         group_number += 1
         print(f'Group Number {group_number}\n{group}')
 
+    return group_dict
+
 # assign(sample_roster, 3)
 # assign(sample_roster, 2)
-assign(sample_roster, 6)
+# assign(sample_roster, 3)
+
+def make_json(py_dict):
+    filename = input('Please enter the filename you wish to create:')
+    print(f'Creating json for Python Dictionary: {py_dict}')
+
+    with open(f'{filename}.json', 'w') as fp:
+        json.dump(py_dict, fp)
+
+make_json(assign(sample_roster, 3))
