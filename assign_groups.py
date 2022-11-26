@@ -72,6 +72,6 @@ def make_json(py_dict):
     print(f'Creating json for Python Dictionary: {py_dict}')
 
     with open(f'{filename}.json', 'w') as fp:
-        json.dump(py_dict, fp)
+        json.dump(py_dict, fp, indent=4)
 
 make_json(assign(sample_roster, 3))

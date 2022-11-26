@@ -1,1 +1,21 @@
-{"0": ["Kirk Hammett", "Steve Harris", "Dave Murray", "Cliff Burton", "Ron McGovney"], "1": ["Nicko McBrain", "Lars Ulrich", "James Hetfield", "Adrian Smith"], "2": ["Dave Mustaine", "Clive Burr", "Lloyd Grant", "Bruce Dickinson"]}
+{
+    "0": [
+        "Cliff Burton",
+        "Dave Murray",
+        "Kirk Hammett",
+        "Dave Mustaine",
+        "Ron McGovney"
+    ],
+    "1": [
+        "Adrian Smith",
+        "Nicko McBrain",
+        "Clive Burr",
+        "James Hetfield"
+    ],
+    "2": [
+        "Steve Harris",
+        "Bruce Dickinson",
+        "Lars Ulrich",
+        "Lloyd Grant"
+    ]
+}
