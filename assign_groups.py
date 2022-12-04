@@ -1,6 +1,7 @@
 from random import sample
 from math import ceil, floor
 import json
+from rosters import thieves_105
 
 sample_roster = ['James Hetfield', 'Dave Mustaine', 'Cliff Burton', 'Kirk Hammett', 'Lars Ulrich', 'Ron McGovney', 'Lloyd Grant', 'Steve Harris', 'Dave Murray', 'Clive Burr', 'Adrian Smith', 'Bruce Dickinson', 'Nicko McBrain']
 
@@ -74,4 +75,8 @@ def make_json(py_dict):
     with open(f'{filename}.json', 'w') as fp:
         json.dump(py_dict, fp, indent=4)
 
-make_json(assign(sample_roster, 3))
+# make_json(assign(sample_roster, 3))
+
+assign(thieves_105,1)
+
+# make_json(assign(thieves_105,1))
